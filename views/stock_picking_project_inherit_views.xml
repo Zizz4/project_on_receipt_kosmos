@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="vpicktree_inherit_project" model="ir.ui.view">
+            <field name="name">stock.picking.tree.inherit.project</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="source_project" optional="show"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_picking_form_inherit_project" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit.project</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="source_project"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
